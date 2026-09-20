@@ -7,7 +7,100 @@
       box-sizing: border-box;
     }
 
+<!DOCTYPE html><html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">  <meta name="theme-color" content="#000000">
+  <meta name="description" content="DRAWT">  <link rel="manifest" href="manifest.json">  <title>DRAWT</title>  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      padding: 24px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 30px;
+      background: #fff;
+      color: #000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: -5px;
+
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      margin: 0 0 25px;
+      font-size: 32px;
+      letter-spacing: 4px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 30px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: transform 0.15s ease;
+    }
+
+    .button:active {
+      transform: scale(0.96);
+    }
+  </style></head><body>  <main class="container"><div class="logo" aria-label="DRAWT">D</div>
+
+<h1>DRAWT</h1>
+
+<a
+  class="button"
+  href="https://sites.google.com/view/drawt/home-page">
+  APRI DRAWT
+</a>
+
+  </main>  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .catch(error => {
+            console.log("Service Worker:", error);
+          });
+      });
+    }
+  </script></body>
+</html>    html, body {
       margin: 0;
       width: 100%;
       height: 100%;
