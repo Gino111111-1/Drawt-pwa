@@ -1,0 +1,17 @@
+{
+"name": "DRAWT",
+"short_name": "DRAWT",
+"description": "Il sito per il Liceo Cannizzaro Succursale dove puoi acquistare tavole e disegni",
+"start_url": "./index.html",
+"display": "standalone",
+"background_color": "#000000",
+"theme_color": "#000000",
+"orientation": "portrait",
+"icons": [
+{
+"src": "icon.svg",
+"sizes": "any",
+"type": "image/svg+xml"
+}
+]
+}
