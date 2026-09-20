@@ -1,94 +1,183 @@
 <!DOCTYPE html><html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">  <meta name="theme-color" content="#000000">
-  <meta name="description" content="DRAWT">  <link rel="manifest" href="manifest.json">  <title>DRAWT</title>  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">  <meta name="theme-color" content="#000000">
+  <meta name="description" content="DRAWT - Il sito per il Liceo Cannizzaro Succursale dove puoi acquistare tavole e disegni">  <link rel="manifest" href="manifest.json">  <title>DRAWT</title>  <style>
     * {
       box-sizing: border-box;
     }
 
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      font-family: Arial, Helvetica, sans-serif;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
     }
 
-    .container {
+    .app {
       width: 100%;
-      min-height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: #fff;
-      padding: 24px;
+      max-width: 700px;
+      margin: auto;
+      padding: 25px 20px 50px;
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 30px;
-      background: #fff;
-      color: #000;
-
+      width: 80px;
+      height: 80px;
+      margin: 10px auto 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      font-size: 64px;
+      background: #fff;
+      color: #000;
+      border-radius: 22px;
+      font-size: 45px;
       font-weight: 900;
-      letter-spacing: -5px;
-
-      margin-bottom: 25px;
+      letter-spacing: -4px;
     }
 
     h1 {
-      margin: 0 0 25px;
-      font-size: 32px;
+      text-align: center;
+      font-size: 38px;
+      margin: 0 0 15px;
       letter-spacing: 4px;
     }
 
-    .button {
-      display: inline-block;
-      padding: 15px 30px;
-      border-radius: 30px;
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: transform 0.15s ease;
+    .intro {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
     }
 
-    .button:active {
-      transform: scale(0.96);
+    .booking {
+      display: block;
+      width: 100%;
+      padding: 17px;
+      background: #fff;
+      color: #000;
+      border-radius: 15px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
     }
-  </style></head><body>  <main class="container"><div class="logo" aria-label="DRAWT">D</div>
+
+    .booking:active {
+      transform: scale(0.98);
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      margin: 0 0 17px;
+      font-size: 16px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .email {
+      color: #fff;
+      word-break: break-word;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+  </style></head><body>  <main class="app"><div class="logo">D</div>
 
 <h1>DRAWT</h1>
 
+<p class="intro">
+  Il sito per il Liceo Cannizzaro Succursale dove puoi acquistare tavole e disegni
+</p>
+
 <a
-  class="button"
-  href="https://sites.google.com/view/drawt/home-page">
-  APRI DRAWT
+  class="booking"
+  href="https://docs.google.com/forms/d/e/1FAIpQLSfpuTIUv7FSfJalZ4rZccKG75DpQxqTTUVMD9K-SbqkcPnBkQ/viewform"
+  target="_blank"
+  rel="noopener">
+  PRENOTA ORA
 </a>
 
-  </main>  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js")
-          .catch(error => {
-            console.log("Service Worker:", error);
-          });
-      });
-    }
-  </script></body>
+<section class="card">
+
+  <h2>ℹ️ COME FUNZIONA?</h2>
+
+  <p>Premi il pulsante PRENOTA ORA</p>
+
+  <p>Scegli cosa vuoi e quando lo vuoi ricevere</p>
+
+  <p>Il giorno indicato riceverai il tuo acquisto a scuola</p>
+
+</section>
+
+<section class="card">
+
+  <h2>ℹ️INFORMAZIONI E REGOLE</h2>
+
+  <p>
+    I ritiri avvengono solo durante le ricreazioni delle 10 e delle 12
+  </p>
+
+  <p>
+    Per il ritiro mi puoi trovare subito dopo essere entrato dal cancello principale tutto a destra vicino al cancello secondario
+  </p>
+
+  <p>
+    Gli ordini vanno fatti due giorni prima della data in cui si vuole ricevere il proprio acquisto
+  </p>
+
+  <p>
+    Per poter ritirare le tavole è obbligatorio portare i soldi necessari
+  </p>
+
+  <p>
+    Nel caso in cui io non riesca a consegnare le tavole nell'orario richiesto sarò alla ricreazione succesiva nel punto prestabilito per effettuare la consegna
+  </p>
+
+  <p>
+    Per eventuali spostamenti della data a causa di motivi personali scriverò io via e-mail scolastica per accordarci su giorni e orari
+  </p>
+
+  <p>
+    Se non riuscissi a effettuare la consegna nel giorno richiesto sarò il giorno successivo al punto di ritiro durante la ricreazione richiesta al momento della prenotazione e il prezzo dell'acquisto sarà dimezzato a meno che io non abbia annunciato lo spostamento della data via mail nei giorni precedenti
+  </p>
+
+  <p>
+    Per comunicazioni importanti scrivere a
+    <a class="email" href="mailto:diego.dandrea@lcannizzaro.edu.it">
+      diego.dandrea@lcannizzaro.edu.it
+    </a>
+  </p>
+
+</section>
+
+<footer>
+  DRAWT
+</footer>
+
+  </main></body>
 </html>
